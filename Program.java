@@ -56,18 +56,25 @@ public class Program {
         System.out.println(indexOutOfBoundsException);
     }
 
-    myFirstList.ClearAll();
-    System.out.println("Is array empty: " + myFirstList.IsEmpty()); //check if it is empty after clearing elements
-    System.out.println("Size: " + myFirstList.Size()); //check size after removal
+        myFirstList.ClearAll();
+        System.out.println("Is array empty: " + myFirstList.IsEmpty()); //check if it is empty after clearing elements
+        System.out.println("Size: " + myFirstList.Size()); //check size after removal
 
-    //Implementing the previous written code to use the generic code now 
-    //to make an array with Strings instead of just ints. Pretty nifty!!
-    MyArrayList<String> myFirstStringList = new MyArrayList<String>();
-    myFirstStringList.AddStart("Hello");
-    myFirstStringList.AddAtIndex("Beautiful", 1);
-    myFirstStringList.AddEnd("World!");
-    myFirstStringList.Print();
+        //Implementing the previous written code to use the generic code now 
+        //to make an array with Strings instead of just ints. Pretty nifty!!
+        MyArrayList<String> myFirstStringList = new MyArrayList<String>();
+        myFirstStringList.AddStart("Hello");
+        myFirstStringList.AddAtIndex("Beautiful", 1);
+        myFirstStringList.AddEnd("World!");
+        myFirstStringList.Print();
 
+
+        MyLinkedList<String> myLinkedList = new MyLinkedList<String>();
+        myLinkedList.AddFront("World!");
+        myLinkedList.AddFront("Hello");
+        myLinkedList.Append("Dog");
+        System.out.println(myLinkedList.GetSize());
+        System.out.println(myLinkedList);
 
 }
   
