@@ -4,52 +4,55 @@ public class MyLinkedList<T> {
 
     public void AddFront(T data) {
         Node<T> newNode = new Node<T>(data);
-        if(head == null) {
+        if (head == null) {
             head = newNode;
         } else {
             newNode.next = head;
             head = newNode;
         }
+        size++;
     }
 
     /**
      * Adds a new node to the end of the LinkedList
      */
-    public void Append(T data){
+    public void Append(T data) {
         Node<T> currentNode = head;
-        
+
         while (currentNode.next != null) {
             currentNode = currentNode.next;
         }
 
-        //once we have our current last node
-        Node<T> newNode = new Node<T>(data); //create the new node and ensure it's next is null
+        // once we have our current last node
+        Node<T> newNode = new Node<T>(data); // create the new node and ensure it's next is null
         currentNode.next = newNode; // set the next of the old last node equal to the new node
+        size++;
     }
-
-        @Override
-        public String toString() {
-            Node<T> currentNode = head;
-            String returnString = "";
-            
-            while(currentNode != null){
-                returnString += currentNode.data.toString();
-                currentNode = currentNode.next;
-            }
-            return returnString;
-        }
-
-        public int GetSize() {
-            return size;
-        }
-
-        public void Insert(int index) {
-            Node<T> currentNode = head;
-            int currentIndex = 0;
-            for (int i = 0; i < index; i++) {
-                
-            }
-        }
     
+    // 1
+    public void Insert(int index) {
+        Node<T> currentNode = head;
+        int currentIndex = 0;
+
+        for (int i = 0; i < index; i++){
+            
+        }
     }
 
+    @Override
+    public String toString() {
+        Node<T> currentNode = head;
+        String returnString = "";
+
+        while (currentNode != null) {
+            returnString += " " + currentNode.data.toString();
+            currentNode = currentNode.next;
+        }
+
+        return returnString;
+    }
+    
+    public int GetSize() {
+        return size;
+    }
+}
