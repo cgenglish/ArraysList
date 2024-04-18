@@ -88,7 +88,7 @@ public class MyLinkedStackTest {
     }
 
     @Test
-    public void Clear_WhenListHasValues_ShouldReturnEmptyList() {
+    public void Clear_WhenListHasValues_PeekShouldReturnNull() {
         //Arrange
         
         MyLinkedStack<String> myLinkedStack = new MyLinkedStack<String>();
